@@ -6,10 +6,13 @@
     font-family: 'Lato', sans-serif;
 }
 
+
 :root{
-    --primary-RL-magin: 0px 80px;
+    --primary-RL: 0px 200px;
+    --primary-R: 200px;
+    --primary-L: 200px;
     --center: 0 auto;
-    --primary-color: #FD6E0A;
+    --text-primary: #FD6E0A;
 }
 
 .text-primary{
@@ -29,11 +32,22 @@
     padding: 15px 25px;
 }
 
+/*margin collapse problem*/
+/**/
+header{
+    background: #FFF8F3;
+    height: 837px;
+    /* margin collapse solution*/
+    /*display: flow-root: The element generates a block element box that establishes a new block formatting context, defining where the formatting root lies.*/
+    display: flow-root;
+}
+
+
 nav{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin:var(--primary-RL-magin);
+    margin:var(--primary-RL);
     margin-top: 30px;
 }
 
@@ -57,4 +71,31 @@ nav li{
 nav a{
     text-decoration: none;
     color: #474747;
+}
+
+
+.banner-container{
+    display: flex;
+    justify-content: space-between;
+    /* border: 1px solid red; */
+
+}
+
+.banner-container .b-info{
+    margin-left: var(--primary-L);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+.banner .btn-contact{
+    background-color: white;
+    color: var(--text-primary);
+    border:1px solid var(--text-primary);
+}
+
+.banner-container img{
+    /* border: 1px solid black; */
+    padding-right: 40px;
 }

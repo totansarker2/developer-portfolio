@@ -1,0 +1,9 @@
+# I learn these topics during building that project.
+
+1. margin collapse
+   solution : my youtube playlist web design
+
+2. Css variable
+
+3. if you do display: flex, then every childs display: block
+   wrap inline elements to a div, to prevent them to become inline to block
