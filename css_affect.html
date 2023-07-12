@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      body {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      span {
+        display: block;
+      }
+      li {
+        list-style-type: none;
+      }
+
+      .level-1,
+      .a1,
+      .a2,
+      .a3 {
+        height: 400px;
+        width: 400px;
+        border: 1px solid red;
+        /*color affects all child element at any condition*/
+        color:blueviolet;
+        font-size: 15px;
+      }
+
+      .level-2,
+      .b1,
+      .b2,
+      .b3 {
+        height: 350px;
+        width: 350px;
+        border: 1px solid green;
+      }
+      .level-3,
+      .c1,
+      .c2,
+      .c3 {
+        height: 300px;
+        width: 300px;
+        border: 1px solid blue;
+      }
+
+      .level-4,
+      .d1,
+      .d2,
+      .d3 {
+        height: 250px;
+        width: 250px;
+        border: 1px solid darkred;
+      }
+
+      .level-5,
+      .e1,
+      .e2,
+      .e3 {
+        height: 200px;
+        width: 200px;
+        border: 1px solid darkred;
+      }
+
+      .level-6,
+      .f1,
+      .f2,
+      .f3 {
+        height: 150px;
+        width: 150px;
+        border: 1px solid rgb(215, 215, 215);
+      }
+
+      /*div div and .level-1 . level-2 are not same bro*/
+
+      /*only level-2 centered*/
+      .level-1 > div {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+       /*all childs and every a will effect these CSS*/
+       .a .a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+
+      /*using CSS child selector Combinator( > )*/
+      /*all first child of every b will effect these CSS*/
+      .b > .b {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+      }
+
+
+      /*only level-2 inside div will effect these CSS
+      div > .c {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }*/
+
+      
+
+      
+
+     
+    </style>
+  </head>
+  <body>
+    <div class="level-1">
+      <div class="level-2">
+        <div class="level-3">
+          <div class="level-4">
+            <div class="level-5">
+              <div class="level-6">only child1 centered</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="a1 a">
+      <div class="b1 a">
+        <div class="c1 a">
+          <div class="d1 a">
+            <div class="e1 a">
+              <div class="f1 a">all child centered</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="a2 b">
+      <div class="b2 b">
+        <div class="c2 b">
+          <div class="d2 b">
+            <div class="e2 b">
+              <div class="f2 b">every first child centered</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- <div class="a3 c">
+      <div class="b3 c">
+        <div class="c3 c">
+          <div class="d3 c">
+            <div class="e3 c">
+              <div class="f3 c">hello is centered</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> -->
+  </body>
+</html>
