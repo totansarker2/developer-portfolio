@@ -6,13 +6,13 @@
     font-family: 'Lato', sans-serif;
 }
 
-
 :root{
     --primary-RL: 0px 200px;
     --primary-R: 200px;
     --primary-L: 200px;
     --center: 0 auto;
     --text-primary: #FD6E0A;
+    --nav-height: 30px;
 }
 
 .text-primary{
@@ -33,15 +33,20 @@
 }
 
 /*margin collapse problem*/
-/**/
 header{
+    --banner-height:837px;
     background: #FFF8F3;
-    height: 837px;
     /* margin collapse solution*/
     /*display: flow-root: The element generates a block element box that establishes a new block formatting context, defining where the formatting root lies.*/
-    display: flow-root;
+    /*display: flex/grid also works*/
+    height: var(--banner-height);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-image: url("./resources/portfolio-resources/images/header_bg.png");
+    background-repeat: no-repeat;
+    background-position: bottom right;
 }
-
 
 nav{
     display: flex;
@@ -73,19 +78,24 @@ nav a{
     color: #474747;
 }
 
-
 .banner-container{
+    /* height: calc(var(--banner-height) - 15px - 15px - 20px - 1px - var(--nav-height)); */
+    height: 100%;
     display: flex;
     justify-content: space-between;
-    /* border: 1px solid red; */
+    align-items: flex-end;
+    border: 1px solid red;
+    position: relative;
 
 }
 
 .banner-container .b-info{
+    height: inherit;
     margin-left: var(--primary-L);
     display: flex;
     flex-direction: column;
     justify-content: center;
+    border:1px solid #181818;
 
 }
 
@@ -96,6 +106,6 @@ nav a{
 }
 
 .banner-container img{
-    /* border: 1px solid black; */
-    padding-right: 40px;
+    margin-right: 50px;
+    border: 1px solid red;
 }
