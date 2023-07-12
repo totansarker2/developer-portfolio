@@ -7,3 +7,6 @@
 
 3. if you do display: flex, then every childs display: block
    wrap inline elements to a div, to prevent them to become inline to block
+
+4. CSS combinator (div > p) - apply style to parent if it has a child with css
+   apply css to a element, but if element has child then they also be affected, to prevent that use css combinator.
