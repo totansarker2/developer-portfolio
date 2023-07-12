@@ -10,3 +10,11 @@
 
 4. CSS combinator (div > p) - apply style to parent if it has a child with css
    apply css to a element, but if element has child then they also be affected, to prevent that use css combinator.
+
+
+In css some attribute are affects child element and some doesn't affects
+   e.g: font-size - affect to child element
+        height,border - doesn't affect to child element
+
+selector always find on root level first then level-2 child element, level-3 child element and so on.
+for advanced study research with CSS Object Model, how brower render's css
