@@ -6,6 +6,12 @@
     font-family: 'Lato', sans-serif;
 }
 
+:root{
+    --primary-RL-magin: 0px 80px;
+    --center: 0 auto;
+    --primary-color: #FD6E0A;
+}
+
 .text-primary{
     color:#FD6E0A;
 }
@@ -27,11 +33,12 @@ nav{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    margin:var(--primary-RL-magin);
+    margin-top: 30px;
 }
 
 .nav-title{
     color: #181818;
-
     font-size: 45px;
     font-weight: 800;
 
@@ -50,8 +57,4 @@ nav li{
 nav a{
     text-decoration: none;
     color: #474747;
-}
-
-nav .nav-btn{
-    margin-right: 60px;
 }
