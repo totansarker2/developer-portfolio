@@ -208,12 +208,38 @@ nav a {
 
 
 .resume-section{
-    height: 700px;
     width: var(--primary-W);
     border: 1px solid #181818;
     margin: var(--center);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     margin-top: var(--card-gap);
 }
+
+.resume-section .resume-container{
+    display: flex;
+    justify-content: center;
+    margin-top: calc(var(--card-gap) - 80px);
+    gap: 20px;
+}
+
+.resume-container .skill{
+    width: 538px;
+    border: 1px solid red;
+    gap: 200px;
+}
+
+.resume-section .resume-container p{
+    margin-top: var(--text-gap);
+    width: 458px;
+}
+
+.resume-section .resume-container div div{
+   gap: 40px;
+}
+
 
 footer{
     background:var(--primary-background);
@@ -230,5 +256,31 @@ footer .container{
     border: 1px solid#FD6E0A;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
+}
+
+footer .container p{
+    width: 600px;
+}
+
+footer form{
+    display: flex;
+    flex-direction: column;
+    gap:30px;
+    border-radius: var(--primary-radius);
+    -webkit-border-radius: var(--primary-radius);
+    -moz-border-radius: var(--primary-radius);
+    -ms-border-radius: var(--primary-radius);
+    -o-border-radius: var(--primary-radius);
+}
+
+footer form input{
+    border: none;
+    outline: none;
+    height: 90px;
+    width: 500px;
+}
+
+footer form .msg{
+    height: 250px;
 }

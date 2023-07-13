@@ -7,14 +7,27 @@
     <title>Document</title>
 
     <style>
+      *{
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+      }
+
       body {
         display: flex;
-        justify-content: space-around;
-        margin-top: 40px;
+        justify-content: center;
+        margin-top: 10px;
       }
 
       li {
         list-style-type: none;
+      }
+
+      span{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 10px;
       }
 
       .level-1,
@@ -23,7 +36,7 @@
       .a3 {
         height: 400px;
         width: 400px;
-        border: 1px solid red;
+        border: 1px solid green;
         /*color affects all child element at any condition*/
         color: blueviolet;
         font-size: 15px;
@@ -35,7 +48,7 @@
       .b3 {
         height: 350px;
         width: 350px;
-        border: 1px solid green;
+        border: 1px solid red;
       }
       .level-3,
       .c1,
@@ -52,7 +65,7 @@
       .d3 {
         height: 250px;
         width: 250px;
-        border: 1px solid darkred;
+        border: 1px solid rgb(0, 130, 139);
       }
 
       .level-5,
@@ -61,7 +74,7 @@
       .e3 {
         height: 200px;
         width: 200px;
-        border: 1px solid darkred;
+        border: 1px solid rgb(28, 0, 139);
       }
 
       .level-6,
@@ -71,6 +84,18 @@
         height: 150px;
         width: 150px;
         border: 1px solid rgb(215, 215, 215);
+      }
+
+      .g2 {
+        height: 200px;
+        width: 200px;
+        border: 2px solid green;
+      }
+
+      .h2 {
+        height: 150px;
+        width: 150px;
+        border: 1px solid red;
       }
 
       /*using CSS child selector Combinator( > )*/
@@ -84,18 +109,25 @@
         margin: 5% auto;
       }
 
-      /*all first child of every b will effect these CSS*/
-      div > .b {
-        margin: 5% auto;
+      /*all first child of every parent will effect these CSS*/
+      .parent2 > div {
+        margin: 10px auto;
       }
 
-      /*only level-2 inside div will effect these CSS*/
+      /*only level-2 inside div will effect these CSS
       div > .c {
         margin: 5% auto;
-      }
+      }*/
     </style>
   </head>
   <body>
+    <div>
+
+    <div style="display: flex;">
+
+    </div>
+  </div>
+    <div class="parent1" style="border: 2px solid black; width: 600px">
     <div>
       <div class="level-1">
         <div class="level-2">
@@ -121,21 +153,42 @@
         </div>
       </div>
     </div>
+    </div>
 
-    <div>
-      <div class="a2 b">
+    <div class="parent2" style="border: 2px solid black; width: 600px">
+      <span style="border-bottom: 2px solid black; font-size:20px; padding-bottom:15px">I am parent</span>
+      
+      <span>I am child1</span>
+      <div class="a2 b" style="border: 2px solid green;">
         <div class="b2 b">
           <div class="c2 b">
             <div class="d2 b">
-              <div class="e2 b">
-                <div class="f2 b">every first child centered</div>
-              </div>
+              <span style="color:red">I am not centered</span>
             </div>
+            <span style="color:red">I am not centered</span>
           </div>
+          <span style="color:red">I am not centered</span>
         </div>
+        <span style="color:green">I am centered</span>
       </div>
 
-      <div class="a3 c" style="margin-top: 60px">
+      <br>
+      <span>I am child2</span>
+      <div class="g2 b">
+        <div class="h2 b"><span style="color: red;">I am not centered</span> </div>
+        <span style="color:green">I am centered</span>
+      </div>
+
+      <br>
+      <span>I am child3</span>
+      <div style="border: 2px solid green; text-align: center">
+        Perent All level-1 child centerd<br />
+        <b style="color: black">Black</b> is perent<br/>
+        <b style="color: green">Green</b> is level-1 child (centered)<br />
+        <b style="color: red">Red</b> is level-2 child (not centered)<br />
+        <b style="color: blue">Blue</b> is level-3 child (not centered)<br />
+      </div>
+      <!-- <div class="a3 c" style="margin-top: 60px">
         <div class="b3 c">
           <div class="c3 c">
             <li class="d3 c">
@@ -145,7 +198,7 @@
             </li>
           </div>
         </div>
-      </div>
+      </div> -->
     </div>
   </body>
 </html>
