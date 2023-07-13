@@ -55,7 +55,8 @@
     color: white;
     font-size: 20px;
     font-weight: 700;
-    padding: 15px 25px;
+    padding: 0px 25px;
+    height: 55px;
 }
 /* .small-text{
     color: var(--dark-3);
@@ -334,10 +335,10 @@ nav a {
 }
 
 .resume-section .resume-container{
+    width: var(--primary-W);
     display: flex;
-    justify-content: center;
     margin-top: calc(var(--card-gap) - 80px);
-    gap: 20px;
+    gap: 80px;
 }
 
 .resume-container .skill{
@@ -379,7 +380,7 @@ nav a {
 }
 
 .resume-section button{
-    margin-top: 50px;
+    margin-top: 70px;
 }
 
 footer{
@@ -394,20 +395,35 @@ footer{
 
 footer .container{
     width: var(--primary-W);
-    border: 1px solid#FD6E0A;
     display: flex;
-    align-items: center;
+    align-items:flex-start;
     justify-content: space-between;
 }
 
+footer .container h1{
+    color: var(--dark-1);
+    font-size: 35px;
+    font-weight: 700;
+}
+
 footer .container p{
+    color: var(--dark-3);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 28px;
+    margin-top: 20px;
     width: 600px;
+}
+
+footer .container .social-link{
+    margin-top: 20px;
 }
 
 footer form{
     display: flex;
     flex-direction: column;
     gap:30px;
+    margin-top: 20px;
     border-radius: var(--primary-radius);
     -webkit-border-radius: var(--primary-radius);
     -moz-border-radius: var(--primary-radius);
@@ -424,4 +440,16 @@ footer form input{
 
 footer form .msg{
     height: 250px;
+}
+
+footer .container form label input[type=text]{
+    color:var(--dark-3);
+    font-size: 16px;
+    font-weight: 400;
+    padding-left: 30px;
+}
+
+footer .container form label input[type=submit]{
+    width:120px;
+    height: 55px;
 }
