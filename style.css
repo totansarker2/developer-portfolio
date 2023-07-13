@@ -1,9 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:@&display=swap');
+
 * {
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
     font-family: 'Open Sans', sans-serif;
-    font-family: 'Lato', sans-serif;
 }
 
 /*Global variable*/
@@ -18,7 +19,22 @@
     --primary-W: 1400px;
     --primary-radius: 10px;
     --card-gap: 150px;
-    --text-gap: 40px
+    --text-gap: 40px;
+    --dark-1: #181818;
+    --dark-2:#474747;
+    --dark-3:#757575;
+    --font-1: 85px;
+    --font-2: 45px;
+    --font-3: 35px;
+    --font-4: 30px;
+    --font-5: 25px;
+    --font-6: 20px;
+    --font-7: 16px;
+    --weight-1: 700;
+    --weight-2: 600;
+    --weight-3: 500;
+    --weight-4: 400;
+
 }
 
 /*Shared class*/
@@ -70,10 +86,14 @@ nav {
 }
 
 .nav-title {
-    color: #181818;
+    color: var(--dark-1);
     font-size: 45px;
     font-weight: 800;
 
+}
+
+nav .text-primary{
+    color: var(--text-primary);
 }
 
 nav>ul {
@@ -88,7 +108,9 @@ nav li {
 
 nav a {
     text-decoration: none;
-    color: #474747;
+    color: var(--dark-2);
+    font-size: 20px;
+    font-weight: 400;
 }
 
 .banner-container {
@@ -117,13 +139,38 @@ nav a {
     flex-direction: column;
     justify-content: center;
     /* border:1px solid #181818; */
-
 }
 
-.banner .btn-contact {
+.banner-container .b-info h1{
+    font-size: var(--font-1);
+    font-weight: var(--weight-1);
+    color: var(--dark-1);
+}
+
+.banner-container .b-info h3{
+    font-size: var(--font-2);
+    font-weight: var(--weight-2);
+    color: var(--dark-2);
+}
+
+.banner-container .b-info p{
+    width: 585px;
+    font-size: 18px;
+    line-height: 30px;
+    margin-top: 20px;
+    color: var(--dark-3);
+    color: var(--dark-3);
+}
+
+.banner-container .btn-container{
+    margin-top: 25px;
+}
+
+.banner-container .btn-container .btn-contact {
     background-color: white;
     color: var(--text-primary);
     border: 1px solid var(--text-primary);
+    margin-left: 20px;
 }
 
 .banner-container img {
@@ -152,6 +199,18 @@ nav a {
     margin-top: var(--card-gap);
 }
 
+.about-card h1{
+    color: var(--dark-1);
+    font-size: 35px;
+    font-weight: 700;
+}
+
+.about-card p{
+    color: var(--dark-3);
+    font-size: 18px;
+    font-weight: 400;
+}
+
 .about-card ul{
     width: 827px;
     margin-top: var(--text-gap);
@@ -167,6 +226,20 @@ nav a {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.about-card ul li span{
+    color: var(--dark-3);
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 30px;
+}
+
+.about-card ul li strong{
+    font-size: 20px;
+    line-height: 30px;
+    color: var(--dark-2);
+    font-weight: 700;
 }
 
 .service-card {
