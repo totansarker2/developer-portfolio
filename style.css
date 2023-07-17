@@ -16,13 +16,13 @@
     --text-primary: #FD6E0A;
     --primary-background: #FFF8F3;
     --nav-height: 30px;
-    --primary-W: 1400px;
+    --primary-W: 70vw;
     --primary-radius: 10px;
     --card-gap: 150px;
     --text-gap: 40px;
     --dark-1: #181818;
-    --dark-2:#474747;
-    --dark-3:#757575;
+    --dark-2: #474747;
+    --dark-3: #757575;
     --font-1: 85px;
     --font-2: 45px;
     --font-3: 35px;
@@ -38,12 +38,12 @@
 }
 
 /*Shared class*/
-.p-primary
-{
+.p-primary {
     width: 827px;
     margin-top: var(--text-gap);
     text-align: center;
 }
+
 .btn-primary {
     background: #FD6E0A;
     border-radius: 6px;
@@ -58,6 +58,7 @@
     padding: 0px 25px;
     height: 55px;
 }
+
 /* .small-text{
     color: var(--dark-3);
     font-size: 16px;
@@ -75,7 +76,11 @@
     font-weight: 700;
 } */
 
+
+
 /*Style start*/
+
+
 /*margin collapse problem*/
 header {
     --banner-height: 870px;
@@ -109,7 +114,7 @@ nav {
 
 }
 
-nav .text-primary{
+nav .text-primary {
     color: var(--text-primary);
 }
 
@@ -158,19 +163,19 @@ nav a {
     /* border:1px solid #181818; */
 }
 
-.banner-container .b-info h1{
+.banner-container .b-info h1 {
     font-size: var(--font-1);
     font-weight: var(--weight-1);
     color: var(--dark-1);
 }
 
-.banner-container .b-info h3{
+.banner-container .b-info h3 {
     font-size: var(--font-2);
     font-weight: var(--weight-2);
     color: var(--dark-2);
 }
 
-.banner-container .b-info p{
+.banner-container .b-info p {
     width: 585px;
     font-size: 18px;
     line-height: 30px;
@@ -179,7 +184,7 @@ nav a {
     color: var(--dark-3);
 }
 
-.banner-container .btn-container{
+.banner-container .btn-container {
     margin-top: 25px;
 }
 
@@ -216,19 +221,19 @@ nav a {
     margin-top: var(--card-gap);
 }
 
-.about-card h1{
+.about-card h1 {
     color: var(--dark-1);
     font-size: 35px;
     font-weight: 700;
 }
 
-.about-card p{
+.about-card p {
     color: var(--dark-3);
     font-size: 18px;
     font-weight: 400;
 }
 
-.about-card ul{
+.about-card ul {
     width: 827px;
     margin-top: var(--text-gap);
 }
@@ -245,22 +250,26 @@ nav a {
     align-items: center;
 }
 
-.about-card ul li span{
+.about-card ul li span {
     color: var(--dark-3);
     font-size: 20px;
     font-weight: 400;
     line-height: 30px;
 }
 
-.about-card ul li strong{
+.about-card ul li strong {
     font-size: 20px;
     line-height: 30px;
     color: var(--dark-2);
     font-weight: 700;
 }
 
+
+
+
 .service-card {
-    width: var(--primary-W);
+    margin: 0 auto;
+    width: 70vw;
     margin: var(--center);
     display: flex;
     flex-direction: column;
@@ -268,7 +277,8 @@ nav a {
     margin-top: var(--card-gap);
 }
 
-.service-card p{
+
+.service-card p {
     margin-top: var(--text-gap);
     color: var(--dark-3);
     font-size: 18px;
@@ -276,49 +286,59 @@ nav a {
     line-height: 30px;
 }
 
-.service-card h1{
+
+.service-card h1 {
     color: var(--dark-1);
     font-size: 35px;
     font-weight: 700;
 }
 
 .service-card ul {
-    width: inherit;
-    height: 377px;
+    height: auto;
     list-style-type: none;
     display: flex;
     justify-content: space-between;
+    /* display: grid;
+    grid-template-columns: repeat(4, 1fr); */
     margin-top: var(--text-gap);
+    gap: 1.5em;
+    /* border: 1px solid black; */
+    /* min-width: 570px; */
 }
 
 .service-card ul li {
-    width: 267px;
     border-radius: 5px;
     background: #FFF;
     box-shadow: 0px 6px 50px 0px rgba(0, 0, 0, 0.06);
     /* border: 1px solid red; */
+    /* height: auto; */
+    padding: 1.8em;
+    /* border: 1px solid red; */
+    min-width: 200px;
 }
 
-.service-card ul li h3{
+.service-card ul li h3 {
     color: var(--dark-1);
     font-size: 20px;
     font-weight: 700;
 }
 
-.service-card ul li p{
+.service-card ul li p {
     color: var(--dark-3);
     font-size: 16px;
     font-weight: 400;
     line-height: 28px;
 }
 
-.service-card ul li p, .service-card h3, .service-card ul img{
-    margin: 25px 33px 0px;
+.service-card ul li p, .service-card h3, .service-card ul img {
+    margin: 1.5em 0 0;
 }
 
+/* */
 
 
-.resume-section{
+
+.resume-section {
     width: var(--primary-W);
     margin: var(--center);
     display: flex;
@@ -328,45 +348,45 @@ nav a {
     margin-top: var(--card-gap);
 }
 
-.resume-section h1{
+.resume-section h1 {
     color: var(--dark-1);
     font-size: 35px;
     font-weight: 700;
 }
 
-.resume-section .resume-container{
+.resume-section .resume-container {
     width: var(--primary-W);
     display: flex;
     margin-top: calc(var(--card-gap) - 80px);
     gap: 80px;
 }
 
-.resume-container .skill{
+.resume-container .skill {
     width: 538px;
     gap: 200px;
 }
 
-.resume-container .skill h1{
+.resume-container .skill h1 {
     color: var(--dark-2);
     font-size: 30px;
     font-weight: 700;
 }
 
-.resume-container .skill h3{
-    margin-top:var(--text-gap);
+.resume-container .skill h3 {
+    margin-top: var(--text-gap);
     color: var(--dark-2);
     font-size: 25px;
     font-weight: 700;
 }
 
-.resume-container .skill h4{
+.resume-container .skill h4 {
     margin-top: 20px;
-    color:var(--dark-3);
+    color: var(--dark-3);
     font-size: 20px;
     font-weight: 600;
 }
 
-.resume-container .skill p{
+.resume-container .skill p {
     color: var(--dark-3);
     font-size: 16px;
     font-weight: 400;
@@ -375,16 +395,16 @@ nav a {
     width: 458px;
 }
 
-.resume-section .resume-container div div{
-   gap: 40px;
+.resume-section .resume-container div div {
+    gap: 40px;
 }
 
-.resume-section button{
+.resume-section button {
     margin-top: 70px;
 }
 
-footer{
-    background:var(--primary-background);
+footer {
+    background: var(--primary-background);
     height: 870px;
     width: 100%;
     display: flex;
@@ -393,20 +413,20 @@ footer{
     margin-top: var(--card-gap);
 }
 
-footer .container{
+footer .container {
     width: var(--primary-W);
     display: flex;
-    align-items:flex-start;
+    align-items: flex-start;
     justify-content: space-between;
 }
 
-footer .container h1{
+footer .container h1 {
     color: var(--dark-1);
     font-size: 35px;
     font-weight: 700;
 }
 
-footer .container p{
+footer .container p {
     color: var(--dark-3);
     font-size: 16px;
     font-weight: 400;
@@ -415,14 +435,14 @@ footer .container p{
     width: 600px;
 }
 
-footer .container .social-link{
+footer .container .social-link {
     margin-top: 20px;
 }
 
-footer form{
+footer form {
     display: flex;
     flex-direction: column;
-    gap:30px;
+    gap: 30px;
     margin-top: 20px;
     border-radius: var(--primary-radius);
     -webkit-border-radius: var(--primary-radius);
@@ -431,25 +451,127 @@ footer form{
     -o-border-radius: var(--primary-radius);
 }
 
-footer form input{
+footer form input {
     border: none;
     outline: none;
     height: 90px;
     width: 500px;
 }
 
-footer form .msg{
+footer form .msg {
     height: 250px;
 }
 
-footer .container form label input[type=text]{
-    color:var(--dark-3);
+footer .container form label input[type=text] {
+    color: var(--dark-3);
     font-size: 16px;
     font-weight: 400;
     padding-left: 30px;
 }
 
-footer .container form label input[type=submit]{
-    width:120px;
+footer .container form label input[type=submit] {
+    width: 120px;
     height: 55px;
+}
+
+/* Responseve Styles */
+.hide {
+    display: none;
+}
+
+
+/* mobile devices */
+@media screen and (max-width:576px) {
+    .service-card {
+        width: 100vw;
+    }
+
+    .service-card ul {
+        width: 100%;
+        height: auto;
+        flex-direction: column;
+    }
+
+    .service-card ul li {
+        margin: 0px;
+    }
+
+    .service-card .wp-primary {
+        padding: 1.8em;
+        text-align: justify;
+    }
+
+    .about-card {
+        width: 100vw;
+        padding: 1.8em;
+    }
+
+    .about-card p {
+        width: auto;
+        text-align: justify;
+    }
+
+    .about-card ul {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .about-card ul li {
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+
+    .resume-section {
+        padding: 1.8em;
+        width: 100vw;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+
+    .r-heading {
+        text-align: center;
+    }
+
+    .resume-container .skill p {
+        width: auto;
+    }
+
+    .resume-container .skill {
+        width: 100%;
+    }
+
+    .resume-section .resume-container {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    footer{
+        justify-content: flex-start;
+        align-items: flex-start;
+        padding: 1.8em;
+        width: 100vw;
+    }
+
+    footer .container{
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        width: 100%;
+    }
+
+    footer .container p{
+        width: auto;
+        text-align: justify;
+    }
+
+    footer .container .form{
+        display: block;
+        width: 100%;
+    }
+
+    footer .container .form input {
+        margin:10px 0px;
+        width: 100%;
+    }
 }
