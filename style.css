@@ -67,28 +67,10 @@
     justify-content: center;
 }
 
-/* .small-text{
-    color: var(--dark-3);
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 28px;
-}
-.small-heading{
-    color: var(--dark-1);
-    font-size: 20px;
-    font-weight: 700;
-}
-.mid-heading{
-    color: var(--dark-1);
-    font-size: 35px;
-    font-weight: 700;
-} */
 
 
 
 /*Style start*/
-
-
 /*margin collapse problem*/
 header {
     background: var(--primary-background);
@@ -111,8 +93,6 @@ nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    /* margin: var(--primary-RL); */
-    /* margin-top: 60px; */
 }
 
 .nav-title {
@@ -130,6 +110,7 @@ nav>ul {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 50px;
 }
 
 nav li {
@@ -493,6 +474,7 @@ footer .container form label input[type=submit] {
     nav ul{
         width: 100%;
         justify-content: space-evenly;
+        gap: 0px;
     }
 
     .banner-container{
