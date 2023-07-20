@@ -59,6 +59,14 @@
     height: 55px;
 }
 
+.primary-container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
 /* .small-text{
     color: var(--dark-3);
     font-size: 16px;
@@ -83,28 +91,28 @@
 
 /*margin collapse problem*/
 header {
-    --banner-height: 870px;
     background: var(--primary-background);
     /* margin collapse solution*/
-    /*display: flow-root: The element generates a block element box that establishes a new block formatting context, defining where the formatting root lies.*/
+    /* display: flow-root: The element generates a block element box that establishes a new block formatting context, defining where the formatting root lies. */
     /*display: flex/grid also works*/
-    height: var(--banner-height);
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    background-image: url("./resources/portfolio-resources/images/header_bg.png");
+    /* justify-content: space-between; */
     background-repeat: no-repeat;
     background-position: bottom right;
+    background-image: url("./resources/portfolio-resources/images/header_bg.png");
+
 }
 
 nav {
+    padding:40px 0px;
     width: var(--primary-W);
     margin: var(--center);
     display: flex;
     align-items: center;
     justify-content: space-between;
     /* margin: var(--primary-RL); */
-    margin-top: 60px;
+    /* margin-top: 60px; */
 }
 
 .nav-title {
@@ -121,11 +129,11 @@ nav .text-primary {
 nav>ul {
     display: flex;
     align-items: center;
+    justify-content: space-between;
 }
 
 nav li {
     list-style: none;
-    margin-left: 60px;
 }
 
 nav a {
@@ -136,31 +144,30 @@ nav a {
 }
 
 .banner-container {
-    /* height: calc(var(--banner-height) - 15px - 15px - 20px - 1px - var(--nav-height)); */
     width: 100%;
     height: 100%;
-    /* border: 1px solid purple; */
-    position: relative;
-
 }
 
 .banner-container .b-main {
-    height: 100%;
     width: var(--primary-W);
     display: flex;
     justify-content: space-between;
-    align-items: flex-end;
-    /* border: 1px solid red; */
+    align-items: center;
     margin: var(--center);
+    position: relative;
+}
+
+
+.banner-container .b-main img{
+    position: relative;
+    right: -15%;
 }
 
 .banner-container .b-info {
-    height: inherit;
     /* margin-left: var(--primary-L); */
     display: flex;
     flex-direction: column;
     justify-content: center;
-    /* border:1px solid #181818; */
 }
 
 .banner-container .b-info h1 {
@@ -194,13 +201,6 @@ nav a {
     border: 1px solid var(--text-primary);
     margin-left: 20px;
 }
-
-.banner-container img {
-    /* margin-right: 50px; */
-    position: absolute;
-    right: 50px;
-}
-
 
 .about-card {
     height: 550px;
@@ -482,27 +482,42 @@ footer .container form label input[type=submit] {
 
 /* mobile devices */
 @media screen and (max-width:576px) {
-    .service-card {
-        width: 100vw;
+    header nav{
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        padding: 30px;
+        gap: 30px;
     }
 
-    .service-card ul {
+    nav ul{
         width: 100%;
-        height: auto;
+        justify-content: space-evenly;
+    }
+
+    .banner-container{
+        width: 100%;
+        padding: 0 1.8em;
+    }
+
+    .banner-container .b-main{
+        margin-top: 20px;
+        width: inherit;
         flex-direction: column;
     }
 
-    .service-card ul li {
-        margin: 0px;
+    .banner-container .b-main p, .banner-container .b-main h1{
+        width: auto;
     }
 
-    .service-card .wp-primary {
-        padding: 1.8em;
-        text-align: justify;
+    .banner-container .b-main img{
+        margin-top: 1.8em;
+        position: static;
+        width: 100%;
     }
 
     .about-card {
-        width: 100vw;
+        width: 100%;
         padding: 1.8em;
     }
 
@@ -522,11 +537,19 @@ footer .container form label input[type=submit] {
         align-items: flex-start;
     }
 
+    .service-card {
+        padding: 1.8em;
+        width: 100%;
+        text-align: justify;
+    }
+
+    .service-card ul {
+        flex-direction: column;
+    }
+
     .resume-section {
         padding: 1.8em;
-        width: 100vw;
-        justify-content: flex-start;
-        align-items: flex-start;
+        width: 100%;
     }
 
     .r-heading {
@@ -547,16 +570,12 @@ footer .container form label input[type=submit] {
     }
 
     footer{
-        justify-content: flex-start;
-        align-items: flex-start;
         padding: 1.8em;
-        width: 100vw;
+        width: 100%;
     }
 
     footer .container{
         flex-direction: column;
-        justify-content: flex-start;
-        align-items: flex-start;
         width: 100%;
     }
 
