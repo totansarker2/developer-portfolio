@@ -155,6 +155,7 @@ nav a {
     font-size: var(--font-1);
     font-weight: var(--weight-1);
     color: var(--dark-1);
+    line-height: 1.15em;
 }
 
 .banner-container .b-info h3 {
